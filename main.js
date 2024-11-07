@@ -1,4 +1,5 @@
 import express from 'express'
+import movieRouter from './routes/movie.js';
 
 
  const app = express()
@@ -9,9 +10,15 @@ import express from 'express'
     console.log("");
 
  })
-  app.get('/movies', ()=>{
-    
-  })
+  
+
+  // CRUD MIDDLEWARE 
+
+  app.use('/movies' , movieRouter)
+
+
+
+
 const port = 6969
  app.listen(port, ()=>{
     console.log(`The server is running at http://localhost :${port}`);
