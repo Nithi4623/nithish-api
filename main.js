@@ -1,5 +1,6 @@
 import express from 'express'
 import movieRouter from './routes/movie.js';
+import { connectDB } from './lib/db.js';
 
 
  const app = express()
@@ -11,6 +12,10 @@ import movieRouter from './routes/movie.js';
 
  })
   
+
+ // Connect Db 
+
+ connectDB()
 
   // CRUD MIDDLEWARE 
 

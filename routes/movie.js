@@ -1,29 +1,21 @@
-import express  from 'express'
+import express from 'express'
+import { MovieDelete, Movieindex, MovieRead, MovieUpdate } from '../controllers/movie.controller.js'
 
 
- const router = express.Router()
+const router = express.Router()
 // CRUD API 
 
 
 // Create 
-router.post('/', (req , res)=>{
-    res.send("Get the movie")
-
-})
+router.post('/', Movieindex)
 
 // Read 
-router.get('/', (req , res)=>{
-    res.send("Read the movie")
-    
-})
+router.get('/', MovieRead)
+
+
 // Update
-router.put('/:id', (req , res)=>{
-    res.send("Update the movie")
+router.put('/:id', MovieUpdate)
 
-})
 // Delete
-router.delete('/:id', (req , res)=>{
-    res.send("Delete the movie")
-
-})
- export default router
+router.delete('/:id', MovieDelete)
+export default router

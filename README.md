@@ -6,3 +6,5 @@
 6. `git commit -m "orgin"`
 7. `git main branch`
 8. `git push -u origin main`
+
+// controller SetUp 
