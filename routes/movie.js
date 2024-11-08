@@ -1,5 +1,5 @@
 import express from 'express'
-import { MovieDelete, Movieindex, MovieRead, MovieUpdate } from '../controllers/movie.controller.js'
+import { MovieCreate, MovieDelete, MovieGet, MovieUpdate } from '../controllers/movie.controller.js'
 
 
 const router = express.Router()
@@ -7,10 +7,10 @@ const router = express.Router()
 
 
 // Create 
-router.post('/', Movieindex)
+router.post('/',MovieCreate)
 
 // Read 
-router.get('/', MovieRead)
+router.get('/', MovieGet)
 
 
 // Update
@@ -18,4 +18,5 @@ router.put('/:id', MovieUpdate)
 
 // Delete
 router.delete('/:id', MovieDelete)
+
 export default router

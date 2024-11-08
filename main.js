@@ -12,6 +12,12 @@ import { connectDB } from './lib/db.js';
 
  })
   
+// Data UnderStanding Middleware Transfer
+
+
+app.use(express.json())
+app.use(express.urlencoded({extended : true}))
+
 
  // Connect Db 
 
