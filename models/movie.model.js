@@ -5,9 +5,21 @@ import { model, Schema } from "mongoose";
 // Write Schema
 
   const schema =new Schema({ 
-    title: String, 
-    desc: String
+    title: {
+         
+        type: String,
+
+        required: true,
+
+        unique: true
+    }, 
+    desc:  {
+        type: String,
+
+       required: true,
+   }, 
 })
 
 //Create your model
- export const Movie = model("Movie" , schema)
+  const Movie = model("Movie" , schema)
+ export default Movie
